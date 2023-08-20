@@ -80,7 +80,7 @@ img{
     </style>
 </head>
 <body>
-    <h1>Cancer Prediction - MACHINE LEARNING PROJECT BY <a href="https://www.facebook.com/profile.php?id=100088739157868">SIMON CHAUDHARY</a></h1>
+    <h1>Breast Cancer Prediction - MACHINE LEARNING PROJECT BY <a href="https://www.facebook.com/profile.php?id=100088739157868">SIMON CHAUDHARY</a></h1>
     <div class="container">
         <form id="prediction-form">
             <div class="grid-container">
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
             const result = await response.json();
-            (result.result==0)?resultParagraph.innerText=`Patient is Malignent (cancer positive)`:resultParagraph.innerText=`Patient is benign (cancer negative)`;
+            (result.result==0)?resultParagraph.innerText=`Patient is Malignent (Breast cancer positive)`:resultParagraph.innerText=`Patient is benign (Breast cancer negative)<br> Note: The value is predicted according to past data. With a score test it can provide you above 90% accuracy.`;
         } else {
             const error = await response.json();
             alert(`Error: ${error.error}`);
