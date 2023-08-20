@@ -211,7 +211,7 @@ img{
         <div class="left">
             <img src="https://s.yimg.com/ny/api/res/1.2/JnfodYp.7BMsiYCt6Jikxg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MA--/https://s.yimg.com/os/creatr-uploaded-images/2022-05/3344bbf0-d5cc-11ec-b77e-c0a256dfdeb8" alt="">
             <h1>Result : </h1>
-            <p id="resultParagraph" style="color:red;"> Not Predicted Yet</p>
+            <p id="resultParagraph" style="color:red;"> Not Predicted Yet : <br> Note: The value is predicted according to past data. With a score test it can provide you above 90% accuracy.</p>
         </div>
     </div>
     <script >
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (response.ok) {
             const result = await response.json();
-            (result.result==0)?resultParagraph.innerText=`Patient is Malignent (Breast cancer positive)`:resultParagraph.innerText=`Patient is benign (Breast cancer negative)<br> Note: The value is predicted according to past data. With a score test it can provide you above 90% accuracy.`;
+            (result.result==0)?resultParagraph.innerText=`Patient is Malignent (Breast cancer positive)`:resultParagraph.innerText=`Patient is benign (Breast cancer negative)`;
         } else {
             const error = await response.json();
             alert(`Error: ${error.error}`);
